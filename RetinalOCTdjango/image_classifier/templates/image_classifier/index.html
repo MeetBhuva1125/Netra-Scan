@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title> नेत्र Scan</title>
+  {% load static %}
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" /><link rel="stylesheet" href={% static "CSS/style.css" %} > 
+</head>
+<body>
+    <header >
+      <a href="#"
+        ><img
+          src={% static "images/Logo-removebg-preview.png" %} alt="logo" class="logo"
+      /></a>
+
+      <input type="checkbox" id="check" />
+      <label for="check" class="icons">
+        <i class="bx bx-menu" id="menu-icon"></i>
+        <i class="bx bx-x" id="close-icon"></i>
+      </label>
+
+      <nav class="navbar">
+        <a href="#" class="nav-item" style="--i: 0">Home</a>
+        <!-- <a href="#" class="nav-item" style="--i: 1">About</a> -->
+        <!-- <a href="#" class="nav-item" style="--i: 2">Service</a> -->
+                
+      </nav>
+    </header>
+
+    <section class="content"> 
+      <div class="upperpart">
+        <div class="write">
+        <div class="Upperinfo">
+          <h1 font = "Montser">Retinal OCT</h1>
+          <p class="upperpara" >Retinal OCT (Optical Coherence Tomography) is a non-invasive imaging technique used in ophthalmology to visualize the layers of the retina, providing detailed cross-sectional images for diagnosis and monitoring of retinal diseases..</p>
+        </div>
+        <div class="scan">
+          <a href="#scan">Scan</a>    
+        </div>
+        </div>
+        <!-- <img width="550px" class="upperimage" src="images/content1-removebg-preview.png" alt="Image of content"> -->
+      </div>
+      
+
+    </section>
+    <h1 class="heading">Disease Description</h1>
+    <div class="mainmaster">
+      <div class="master">
+        <div class="card1">
+          <div class="insidecard">
+            <div class="image-container">
+              <img src={%static "images/DME.png" %} alt="">
+              <div class="text-overlay">
+                <!-- <div class="information">
+                  Diabetic macular edema (DME) is a vision-threatening complication of diabetes caused by fluid buildup in the macula. Treatments such as anti-VEGF injections, steroids, or laser therapy aim to reduce swelling and preserve vision.Regualr eye exams are ...
+                </div> -->
+                <!-- <div class="read">
+                  <div class="insideread">
+                    Read More
+                  </div>
+                </div> -->
+              
+              </div>
+            </div>
+            <div class="back">
+              <p> Diabetic Macular Edema, or DME, is a condition that arises due to complications from Diabetic Retinopathy. Diabetic Retinopathy is caused by high blood sugar levels damaging blood vessels in the retina. DME specifically refers to the buildup of fluid in the macula, the central part of the retina responsible for sharp central vision. This fluid accumulation causes swelling and distortion of the macula, leading to blurred vision and difficulty seeing fine details. Early detection and management of diabetes, alongside regular eye exams, are crucial for preventing DME and protecting vision.</p>
+            </div>
+            
+          </div>
+        </div>
+        <div class="card1">
+          <div class="insidecard">
+            <div class="image-container">
+              <img src={%static "images/DRUSSEN.png" %} alt="">
+              <div class="text-overlay">
+              <!-- <div class="information">
+                Drusen are small yellow or white deposits under the retina, commonly associated with age-related macular degeneration (AMD). Their accumulation can indicate an increased risk of vision loss, particularly in the dry form of AMD. Regular eye exams help monitor...
+              </div>
+              <div class="read">
+                <div class="insideread">
+                  Read More
+                </div>
+              </div> -->
+              </div>
+              
+            </div>
+            <div class="back">
+              
+              <p>Drusen are tiny yellow deposits that accumulate between the retina and the underlying Bruch membrane in the eye. These deposits are a common sign of Age-related Macular Degeneration (AMD), a leading cause of vision loss. While drusen themselves don't cause immediate vision problems, their extensive presence can indicate an increased risk of developing more serious conditions like Choroidal Neovascularization (CNV) and Diabetic Macular Edema (DME).</p>
+            </div>
+          </div>
+        </div>
+        <div class="card1">
+          <div class="insidecard">
+            <div class="image-container">
+              <img src={% static "images/CNV.png" %} alt="">
+              <div class="text-overlay">
+              <!-- <div class="information">
+                Choroidal neovascularization (CNV) is an abnormal growth of blood vessels beneath the retina, often associated with age-related macular degeneration (AMD). These fragile vessels can leak blood and fluid, leading to sudden vision loss or distortion. Treatments such as anti-VEGF injections or laser therapy aim to halt CNV progression and... 
+              </div>
+              <div class="read">
+                <div class="insideread">
+                  Read More
+                </div>
+              </div> -->
+              </div>
+              
+            </div>
+            <div class="back">
+              <p>Choroidal Neovascularization, often abbreviated as CNV, is the abnormal growth of new blood vessels from the choroid, the blood supply layer underneath the retina. These new vessels are fragile and can leak fluid or blood into the delicate retinal space. This leakage can cause swelling and distorted vision, potentially leading to significant vision loss. CNV is a sight-threatening complication that can occur in AMD and Diabetic Retinopathy. Early detection and treatment are essential to minimize vision damage.</p>
+            </div>
+          </div>
+        </div>  
+      </div>
+    </div>
+    
+    <footer>
+      <section class="content1" id="scan">
+        <h1>Scan Image Here</h1>
+        <form id="imageForm" action="{% url 'classify_image' %}" method="post" enctype="multipart/form-data">
+          {% csrf_token %}
+          <label for="file" class="upload-btn">Upload Image</label>
+          <input type="file" name="image" id="file" accept="image/*" style="display: none;" onchange="submitForm()">
+        </form>
+      </section>
+    </footer>
+  
+    <script>
+      function submitForm() {
+        document.getElementById("imageForm").submit();
+      }
+    </script>
+
+</body>
+<!-- partial -->
+<!-- <script src="script.js"></script>   -->
+
+</html>

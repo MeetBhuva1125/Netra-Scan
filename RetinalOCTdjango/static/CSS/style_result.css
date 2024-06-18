@@ -1,0 +1,168 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    overflow:auto;
+  }
+  
+  body {
+    font-family: "Poppins", sans-serif;
+    
+    min-height: 100vh;
+    background: hsla(257, 98%, 81%, 1);
+  
+  background: linear-gradient(45deg, hsla(257, 98%, 81%, 1) 0%, hsla(48, 100%, 84%, 1) 100%);
+  
+  background: -moz-linear-gradient(45deg, hsla(257, 98%, 81%, 1) 0%, hsla(48, 100%, 84%, 1) 100%);
+  
+  background: -webkit-linear-gradient(45deg, hsla(257, 98%, 81%, 1) 0%, hsla(48, 100%, 84%, 1) 100%);
+  
+  filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#B99DFE", endColorstr="#FFEFAE", GradientType=1 );
+  }
+  
+  header {
+    position:absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding-right: 35px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 5;
+    background:#170738d3;
+    
+  }
+  
+  .logo {
+    margin-top: 10px;
+    margin-left: 10px;
+    width: 130px;
+    height: 70px;
+    object-fit: cover;
+    
+   
+  }
+  
+  .nav-item {
+    position: relative;
+    color: #ffffff;
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 25px;
+    letter-spacing: -0.13px;
+    text-decoration: none;
+    margin-left: 2.5rem;
+    transition: all 0.5s ease;
+    
+  }
+  
+  .nav-item:hover {
+    color: white;
+  }
+  
+  .nav-item::after {
+    content: "";
+    position: absolute;
+    bottom: -0.3rem;
+    left: 50%;
+    width: 0;
+    height: 0.15rem;
+    transform: translateX(-50%);
+    background-color: white;
+    transition: all 0.5s ease;
+  }
+  
+  .nav-item:hover::after {
+    width: 100%;
+  }
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    
+    align-items: left;
+    min-height: 100vh;
+    overflow: hidden;
+    background-image: url('images/bglikely.png');
+    background-size: cover; /* Resize background image to cover the container */
+    background-position: center; /* Center the background image */
+    width: 100%; /* Adjust width as needed */
+    height: 400px;
+  }
+  
+  .content h1 {
+    margin-top: 150px;
+    font-size: 4rem;
+    font-weight: 600;
+    text-shadow: 0 0 6px #000000;
+    text-align: center;
+    
+    color:white;
+    transition: all 0.5s ease;
+  }
+  .content1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: left;
+    min-height: 100vh;
+    overflow: hidden;
+  } 
+  .content1 h1 {
+    
+    font-size: 6rem;
+    font-weight: 600;
+    text-shadow: 0px 0px 8px #170738;
+    color:white;
+    transition: all 0.5s ease;
+  }
+  
+  .headsection{
+    border:1px solid black;
+    width:50vw;
+    display: inline-block;
+    
+    
+  }
+  .upperpara{
+    width:50vw;
+    font-size: 30;
+    font-weight: 500;
+    color: #170738;
+  }
+  .upperpart{
+    /* border:1px solid #000; */
+    display: flex;
+    justify-content: space-between;
+    width: 95vw;
+  }
+  .img{
+    box-shadow: #000000 0 0 60px 90px;
+    align-items: right;
+    margin-right: 50px ;
+    border-radius: 60px;
+  }
+  .write{
+    margin-top: 50px;
+    margin-left: 20px;
+    padding: 50px;
+  }
+  .Upperinfo{
+    /* text-shadow: 2px 2px 4px #000000; */
+    color : #000000;
+  }
+
+.box{
+    border-radius: 20px;
+    padding: 20px;
+    width: 50vw;
+    border: 3px solid black;
+    margin: 0 auto;
+    margin-top: 50px;
+    text-align: center;
+    
+}
+.box p{
+    font-size: 1.56rem;
+}

@@ -1,0 +1,38 @@
+<!-- templates/result.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+    <link href ="https://unpkg.com/boxicons@2.1.4/css/boxicons.mic.css" rel="stylesheet" />
+    <link rel="stylesheet" href={% static "CSS/style_result.css" %}>
+    <title>Retinal OCT Results</title>
+</head>
+<body>
+    <header >
+        <a href="#"
+          ><img
+            src = {% static " D:\Projectss\project exhibition 2\Test folder\Test folder\RetinalOCTdjango\static\IMAGES\Logo-removebg-preview.png" %} 
+            alt="logo"
+            class="logo"
+        /></a>
+        
+        <nav class="navbar">
+          <a href="#" class="nav-item" style="--i: 0">Home</a>
+
+        </nav>
+    </header>
+    <section class="content">
+        <h1>Retinal OCT Results</h1>
+        <div class="box">
+            <p><strong>Predicted Disease Name:</strong> {{ predicted_class_name }}</p>
+            <p><strong>Description:</strong> {{ result_description }}</p>
+            <p><strong>Action:</strong> {{ action }}</p>
+
+        </div>        
+    </section>
+
+</body>
+</html>
